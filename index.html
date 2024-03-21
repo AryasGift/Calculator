@@ -10,38 +10,42 @@
 <body>
     <h1>CALCULATOR</h1>
     <div class="container bg-light mt-5" id="main">
-     <div class="mt-3" id="main2"></div>
+     <div class="mt-3">
+        <input id="result" type="text" class="form-control">
+     </div>
+
      <div class="row mt-2">
-        <div class="col-lg-3 col-md-3 col-sm-3 col-3"><button type="button" class="btn btn-outline-secondary" id="button1">(</button></div>
-        <div class="col-lg-3 col-md-3 col-sm-3 col-3"><button type="button" class="btn btn-outline-secondary" id="button2">)</button></div>
-        <div class="col-lg-3 col-md-3 col-sm-3 col-3"><button type="button" class="btn btn-outline-secondary" id="button3">C</button></div>
-        <div class="col-lg-3 col-md-3 col-sm-3 col-3"><button type="button" class="btn btn-outline-secondary" id="button4">/</button></div>
+        <div class="col-lg-3 col-md-3 col-sm-3 col-3"><button type="button" class="btn btn-outline-secondary" id="button1" onclick="display('(')">(</button></div>
+        <div class="col-lg-3 col-md-3 col-sm-3 col-3"><button type="button" class="btn btn-outline-secondary" id="button2" onclick="display(')')">)</button></div>
+        <div class="col-lg-3 col-md-3 col-sm-3 col-3"><button type="button" class="btn btn-outline-secondary" id="button3" onclick=" allClear()">C</button></div>
+        <div class="col-lg-3 col-md-3 col-sm-3 col-3"><button type="button" class="btn btn-outline-secondary" id="button4" onclick="display('/')">/</button></div>
     </div>
 
     <div class="row mt-2">
-        <div class="col-lg-3 col-md-3 col-sm-3 col-3"><button type="button" class="btn btn-outline-secondary" id="button5">7</button></div>
-        <div class="col-lg-3 col-md-3 col-sm-3 col-3"><button type="button" class="btn btn-outline-secondary" id="button6">8</button></div>
-        <div class="col-lg-3 col-md-3 col-sm-3 col-3"><button type="button" class="btn btn-outline-secondary" id="button7">9</button></div>
-        <div class="col-lg-3 col-md-3 col-sm-3 col-3"><button type="button" class="btn btn-outline-secondary" id="button8">*</button></div>
+        <div class="col-lg-3 col-md-3 col-sm-3 col-3"><button type="button" class="btn btn-outline-secondary" id="button5" onclick="display(7)">7</button></div>
+        <div class="col-lg-3 col-md-3 col-sm-3 col-3"><button type="button" class="btn btn-outline-secondary" id="button6"  onclick="display(8)">8</button></div>
+        <div class="col-lg-3 col-md-3 col-sm-3 col-3"><button type="button" class="btn btn-outline-secondary" id="button7"  onclick="display(9)">9</button></div>
+        <div class="col-lg-3 col-md-3 col-sm-3 col-3"><button type="button" class="btn btn-outline-secondary" id="button8"  onclick="display('*')">*</button></div>
     </div>
     <div class="row mt-2">
-        <div class="col-lg-3 col-md-3 col-sm-3 col-3"><button type="button" class="btn btn-outline-secondary" id="button9">4</button></div>
-        <div class="col-lg-3 col-md-3 col-sm-3 col-3"><button type="button" class="btn btn-outline-secondary" id="button10">5</button></div>
-        <div class="col-lg-3 col-md-3 col-sm-3 col-3"><button type="button" class="btn btn-outline-secondary" id="button11">6</button></div>
-        <div class="col-lg-3 col-md-3 col-sm-3 col-3"><button type="button" class="btn btn-outline-secondary" id="button12">-</button></div>
+        <div class="col-lg-3 col-md-3 col-sm-3 col-3"><button type="button" class="btn btn-outline-secondary" id="button9" onclick="display(4)">4</button></div>
+        <div class="col-lg-3 col-md-3 col-sm-3 col-3"><button type="button" class="btn btn-outline-secondary" id="button10" onclick="display(5)">5</button></div>
+        <div class="col-lg-3 col-md-3 col-sm-3 col-3"><button type="button" class="btn btn-outline-secondary" id="button11"onclick="display(6)">6</button></div>
+        <div class="col-lg-3 col-md-3 col-sm-3 col-3"><button type="button" class="btn btn-outline-secondary" id="button12" onclick="display('-')">-</button></div>
     </div>
     <div class="row mt-2">
-        <div class="col-lg-3 col-md-3 col-sm-3 col-3"><button type="button" class="btn btn-outline-secondary" id="button13">1</button></div>
-        <div class="col-lg-3 col-md-3 col-sm-3 col-3"><button type="button" class="btn btn-outline-secondary" id="button14">2</button></div>
-        <div class="col-lg-3 col-md-3 col-sm-3 col-3"><button type="button" class="btn btn-outline-secondary" id="button15">3</button></div>
-        <div class="col-lg-3 col-md-3 col-sm-3 col-3"><button type="button" class="btn btn-outline-secondary" id="button16">+</button></div>
+        <div class="col-lg-3 col-md-3 col-sm-3 col-3"><button type="button" class="btn btn-outline-secondary" id="button13" onclick="display(1)">1</button></div>
+        <div class="col-lg-3 col-md-3 col-sm-3 col-3"><button type="button" class="btn btn-outline-secondary" id="button14" onclick="display(2)">2</button></div>
+        <div class="col-lg-3 col-md-3 col-sm-3 col-3"><button type="button" class="btn btn-outline-secondary" id="button15" onclick="display(3)">3</button></div>
+        <div class="col-lg-3 col-md-3 col-sm-3 col-3"><button type="button" class="btn btn-outline-secondary" id="button16" onclick="display('+')">+</button></div>
     </div>
     <div class="row mt-2 mb-4">
-        <div class="col-lg-3 col-md-3 col-3"><button type="button" class="btn btn-outline-secondary" id="button17">0</button></div>
-        <div class="col-lg-3 col-md-3 col-3"><button type="button" class="btn btn-outline-secondary" id="button18">.</button></div>
-        <div class="col-lg-3 col-md-3 col-3"><button type="button" class="btn btn-outline-secondary" id="button19">exp</button></div>
-        <div class="col-lg-3 col-md-3 col-3"><button type="button" class="btn btn-outline-secondary" id="button20">=</button></div>
+        <div class="col-lg-3 col-md-3 col-3"><button type="button" class="btn btn-outline-secondary" id="button17" onclick="display(7)">0</button></div>
+        <div class="col-lg-3 col-md-3 col-3"><button type="button" class="btn btn-outline-secondary" id="button18" onclick="display('.')">.</button></div>
+        <div class="col-lg-3 col-md-3 col-3"><button type="button" class="btn btn-outline-secondary" id="button19" onclick="backSpace()">del</button></div>
+        <div class="col-lg-3 col-md-3 col-3"><button type="button" class="btn btn-outline-secondary" id="button20" onclick="findOut()">=</button></div>
     </div>
     </div>
 </body>
+<script src="./calculator.js"></script>
 </html>
