@@ -1,4 +1,7 @@
 function display(n){
+    if (result.value === "0") {
+        result.value = "";
+    }
     result.value+=n;
 }
 function allClear(){
